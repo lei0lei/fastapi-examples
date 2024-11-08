@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "hotfix-server"
+version = "0.1.0"
+description = ""
+authors = ["meng fanlei <lei.lei.fan.meng@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["standard"], version = "^0.115.4", source = "tsinghua"}
+psutil = {version = "^6.1.0", source = "tsinghua"}
+gpuinfo = {version = "^1.0.0a7", source = "tsinghua"}
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
