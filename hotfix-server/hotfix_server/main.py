@@ -127,7 +127,7 @@ async def machine_settings():
     return {"message": "machine settings"}
 
 # 定义文件保存目录
-UPLOAD_DIRECTORY = "./uploaded_files"
+UPLOAD_DIRECTORY = "./.uploaded_files"
 os.makedirs(UPLOAD_DIRECTORY, exist_ok=True)
 
 @app.post("/upload-file/")
@@ -143,9 +143,9 @@ async def upload_file(file: UploadFile = File(...)):
 
 
 
-
-
-
 @app.get("/upgrade-app")
 async def upgrade_app():
+    '''
+    更新脚本调用
+    '''
     return {"message": "upgrade trigger"}
