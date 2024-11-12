@@ -69,12 +69,14 @@ async def app_logs():
     '''
     return {"message": "logs"}
 
+
 @app.get("/app-version")
 async def app_versions():
     '''
     show app logs for some app
     '''
     return {"message": "version"}
+
 
 @app.get("/app-status")
 async def app_status():
